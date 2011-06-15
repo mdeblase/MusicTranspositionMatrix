@@ -1,6 +1,7 @@
 package data;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -78,5 +79,22 @@ public class MusicMatrixImpl implements MusicMatrix{
     public int getNumCols() {
         return matrix[0].length;
     }
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < starting.size(); i++) {
+    		for (int j = 0; j < starting.size(); j++) {
+    			String note = NoteValueMap.numberMap.get(matrix[i][j]);
+    			sb.append(note);
+    			if(note.length() == 2)
+    				sb.append(" ");
+    			else
+    				sb.append("  ");
+    		}
+    		sb.append("\n");
+    	}
+		return sb.toString();
+	}
 
 }
