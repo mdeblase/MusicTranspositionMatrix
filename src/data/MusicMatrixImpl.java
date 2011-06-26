@@ -35,7 +35,7 @@ public class MusicMatrixImpl implements MusicMatrix{
     /**
      * Build the matrix
      * For starting size n there are n-1 differences(d)
-     * Each value in row j is the value in row j-1 subtracted by difference j-1
+     * Each value in row j is the value in row j-1 subtracted by difference d(j-1)
      * Ex. starting row 0 1 3 4
      *     differences d0=1(0,1), d1=2(1,3) d3=1(3,4)
      *     next row use d0 yeilds 11 0 2 3

@@ -1,0 +1,17 @@
+Music Matrix
+
+Given a list of notes represented as String values of size n, create an n by n size matrix of transpositions. Each row of new notes is derived by subtracting the note in the same column in the previous row from a delta value. Each delta value applies to one row.
+
+A delta value is the absolute value of 2 adjacent notes in the input row. An input of 4 notes will have 3 delta values used to build the 3 remaining notes of the 4x4 matrix.
+
+The 12 note scale is defined with numbers 0-11. from C to B.  If a transposed value is less than 0, C, then wrap around to the opposite end of the scale. 
+
+Example
+
+Input {C,C#,D#,E} or {0,1,3,4}
+delta values are d1=1 d2=2 d3=1
+
+Output      [[C][C#][D#][E]   [[0][1][3][4]
+use d1       [B][C][D][Eb]     [11][0][2][3]
+use d2       [A][Bb][C][C#]    [9][10][0][1]
+use d3       [G#][A][B][C]]    [8][9][11][0]] 
