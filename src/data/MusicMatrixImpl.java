@@ -1,8 +1,6 @@
 package data;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
 
 /**
  *
@@ -17,6 +15,7 @@ public class MusicMatrixImpl implements MusicMatrix{
     public MusicMatrixImpl(ArrayList<String> firstRow) {
         this.starting = firstRow;
         matrix = new int[starting.size()][starting.size()];
+        this.construct();
     }
 
     public int[] getRow(int rowNum) {
@@ -85,7 +84,11 @@ public class MusicMatrixImpl implements MusicMatrix{
 		StringBuilder sb = new StringBuilder();
 		for(int i = 0; i < starting.size(); i++) {
     		for (int j = 0; j < starting.size(); j++) {
-    			String note = NoteValueMap.numberMap.get(matrix[i][j]);
+    			String note = "";
+    			if (i == 0) // First row just use starting row to preserve user input ie. User entered D# so that instead of Eb
+    				note = starting.get(j);
+    			else
+    				note = NoteValueMap.numberMap.get(matrix[i][j]);
     			sb.append(note);
     			if(note.length() == 2)
     				sb.append(" ");

@@ -8,14 +8,19 @@ public class NoteValueMap {
 	static {
 		noteMap.put("C", 0);
 		noteMap.put("C#", 1);
+		noteMap.put("Db", 1);
 		noteMap.put("D", 2);
+		noteMap.put("D#", 3);
 		noteMap.put("Eb", 3);
 		noteMap.put("E", 4);
 		noteMap.put("F", 5);
 		noteMap.put("F#", 6);
+		noteMap.put("Gb", 6);
 		noteMap.put("G", 7);
 		noteMap.put("G#", 8);
+		noteMap.put("Ab", 8);
 		noteMap.put("A", 9);
+		noteMap.put("A#", 10);
 		noteMap.put("Bb", 10);
 		noteMap.put("B", 11);
 		numberMap.put(0, "C");
