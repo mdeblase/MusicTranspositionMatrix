@@ -1,6 +1,13 @@
-package data;
+package matrix.impl;
 
 import java.util.ArrayList;
+
+import util.NoteValueMap;
+
+import matrix.MusicMatrix;
+
+
+
 
 /**
  *
@@ -100,4 +107,11 @@ public class MusicMatrixImpl implements MusicMatrix{
 		return sb.toString();
 	}
 
+    public int getNoteValue(int x, int y) {
+        return this.matrix[x][y];
+    }
+
+    public String getNoteString(int x, int y) {
+        return NoteValueMap.numberMap.get(matrix[x][y]);
+    }
 }

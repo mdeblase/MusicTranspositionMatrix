@@ -1,10 +1,10 @@
-package data;
+package util;
 
 import java.util.HashMap;
 
 public class NoteValueMap {
-	protected static final HashMap<String, Integer> noteMap = new HashMap<String, Integer>();
-	protected static final HashMap<Integer, String> numberMap = new HashMap<Integer, String>();
+	public static final HashMap<String, Integer> noteMap = new HashMap<String, Integer>();
+	public static final HashMap<Integer, String> numberMap = new HashMap<Integer, String>();
 	static {
 		noteMap.put("C", 0);
 		noteMap.put("C#", 1);

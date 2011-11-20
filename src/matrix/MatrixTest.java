@@ -1,6 +1,9 @@
-package data;
+package matrix;
+
 
 import java.util.ArrayList;
+
+import matrix.impl.MusicMatrixListImpl;
 
 /**
  * 
@@ -14,12 +17,11 @@ public class MatrixTest {
 	public static void main(String[] args) {
 		ArrayList<String> noteList = new ArrayList<String>();
 		noteList.add("C");
-		noteList.add("C#");
+		noteList.add("F");
 		noteList.add("D#");
 		noteList.add("E");
 		noteList.add("B");
-		noteList.add("F");
-		MusicMatrixImpl matrix = new MusicMatrixImpl(noteList);
+		MusicMatrixListImpl matrix = new MusicMatrixListImpl(noteList);
 		System.out.println(matrix.toString());
 	}
 
