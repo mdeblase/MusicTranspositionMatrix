@@ -65,11 +65,19 @@ public class MusicMatrixImpl implements MusicMatrix{
     private int[] getDifferences() {
         int[] diff = new int[starting.size() - 1];
         for (int i = 0; i < starting.size() -1;i++) {
-        	diff[i] = Math.abs(matrix[0][i] - matrix[0][i+1]);
+        	diff[i] = Math.abs(this.subtract(matrix[0][i], matrix[0][i+1]));
         }
         return diff;
     }
 
+    /**
+     * Subtract num2 from num1, if the result is negative add 12 to
+     * wrap around the scale.
+     * 
+     * @param num1
+     * @param num2
+     * @return
+     */
     private int subtract(int num1, int num2) {
         int result = num2 - num1;
         if (result < 0)
